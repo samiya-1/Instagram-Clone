@@ -10,6 +10,8 @@ class SelectAccountScreen extends StatefulWidget {
 class _SelectAccountScreenState extends State<SelectAccountScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: Center(child: Text("Select Account Screen")),
+    );
   }
 }
