@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagram_clone/core/constants/image_constant.dart';
 import 'package:instagram_clone/view/selectaccountscreen/selectaccountscreen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -15,6 +16,7 @@ class _SplashScreenState extends State<SplashScreen> {
           Navigator.pushReplacement(context,
               MaterialPageRoute(builder: (context) => SelectAccountScreen()))
         });
+    super.initState();
   }
 
   @override
@@ -22,7 +24,7 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       body: Center(
         child: Image.asset(
-          "assets/images/instagramicon.png",
+          ImageConstant.appicon,
           scale: 1.5,
         ),
       ),
