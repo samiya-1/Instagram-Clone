@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:instagram_clone/core/constants/color_constant.dart';
 import 'package:instagram_clone/core/constants/image_constant.dart';
 import 'package:instagram_clone/global_widgets/custom_Button.dart';
+import 'package:instagram_clone/view/loginScreen/loginScreen.dart';
 
 class SelectAccountScreen extends StatefulWidget {
   const SelectAccountScreen({super.key});
@@ -43,7 +44,8 @@ class _SelectAccountScreenState extends State<SelectAccountScreen> {
                 text: "Log in",
                 buttoncolor: ColorConstant.primaryblue,
                 onTap: () {
-                  print("My Cust button pressed");
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => LoginScreen()));
                 },
               ),
               TextButton(
