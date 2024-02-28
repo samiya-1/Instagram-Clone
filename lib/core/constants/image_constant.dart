@@ -6,4 +6,9 @@ class ImageConstant {
   static const String igtvicon = "assets/images/IGTV.png";
   static const String messangericon = "assets/images/Messanger.png";
   static const String reelicon = "assets/images/Tab 3.png";
+  static const String officialicon = "assets/images/Official Icon.png";
+  static const String rectangleimage = "assets/images/Rectangle.png";
+
+  
+
 }

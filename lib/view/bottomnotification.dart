@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:instagram_clone/core/constants/color_constant.dart';
 import 'package:instagram_clone/core/constants/image_constant.dart';
+import 'package:instagram_clone/view/Home_Page/Home_page.dart';
 import 'package:instagram_clone/view/selectaccountscreen/selectaccountscreen.dart';
 
 class BottomNavigation extends StatefulWidget {
@@ -12,15 +13,15 @@ class BottomNavigation extends StatefulWidget {
 
 class _BottomNavigationState extends State<BottomNavigation> {
   int selectedindex = 0;
-  void ontap(index) {
-    setState(() {
-      selectedindex = index;
-    });
-  }
-
+  List navigationList = [
+    HomePage(),
+    Text("hi"),
+    Text("bvjgbk"),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      body: navigationList.elementAt(selectedindex),
       bottomNavigationBar: BottomNavigationBar(
           currentIndex: selectedindex,
           onTap: (value) {

@@ -3,6 +3,7 @@ import 'package:instagram_clone/core/constants/color_constant.dart';
 import 'package:instagram_clone/core/constants/image_constant.dart';
 import 'package:instagram_clone/global_widgets/custom_Button.dart';
 import 'package:instagram_clone/view/Home_Page/Home_page.dart';
+import 'package:instagram_clone/view/bottomnotification.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -77,8 +78,11 @@ class _LoginScreenState extends State<LoginScreen> {
                       ? ColorConstant.primaryblue
                       : ColorConstant.primaryblue.withOpacity(.4),
                   onTap: () {
-                    Navigator.pushAndRemoveUntil(context,
-                        MaterialPageRoute(builder: (Conext) => HomePage()),(Route)=>false);
+                    Navigator.pushAndRemoveUntil(
+                        context,
+                        MaterialPageRoute(
+                            builder: (Conext) => BottomNavigation()),
+                        (Route) => false);
                   },
                 ),
                 SizedBox(
