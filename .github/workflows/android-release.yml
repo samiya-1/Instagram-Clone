@@ -3,7 +3,7 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 ---
-name: FLutter_Release
+name: Flutter_Release
 
 on:
   push:
@@ -32,5 +32,13 @@ jobs:
       # Create apk.
       - name: Start release build
         run: flutter build apk --release
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: build apk file
+          path: build/app/outputs/flutter-apk/app-release.apk
+          retention-days: 5  
+    
 
      
