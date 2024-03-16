@@ -8,7 +8,5 @@ class ImageConstant {
   static const String reelicon = "assets/images/Tab 3.png";
   static const String officialicon = "assets/images/Official Icon.png";
   static const String rectangleimage = "assets/images/Rectangle.png";
-
-  
-
+  static const String storyimg = "assets/images/User.png";
 }

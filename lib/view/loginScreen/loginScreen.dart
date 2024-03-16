@@ -3,7 +3,7 @@ import 'package:instagram_clone/core/constants/color_constant.dart';
 import 'package:instagram_clone/core/constants/image_constant.dart';
 import 'package:instagram_clone/global_widgets/custom_Button.dart';
 import 'package:instagram_clone/view/Home_Page/Home_page.dart';
-import 'package:instagram_clone/view/bottomnotification.dart';
+import 'package:instagram_clone/view/BottomNavigation/bottomnotification.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});

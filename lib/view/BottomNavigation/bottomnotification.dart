@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:instagram_clone/core/constants/color_constant.dart';
 import 'package:instagram_clone/core/constants/image_constant.dart';
 import 'package:instagram_clone/view/Home_Page/Home_page.dart';
+import 'package:instagram_clone/view/exploreSearchPage/searchScreen.dart';
 import 'package:instagram_clone/view/selectaccountscreen/selectaccountscreen.dart';
 
 class BottomNavigation extends StatefulWidget {
@@ -15,8 +16,16 @@ class _BottomNavigationState extends State<BottomNavigation> {
   int selectedindex = 0;
   List navigationList = [
     HomePage(),
-    Text("hi"),
-    Text("bvjgbk"),
+    SearchScreen(),
+    Container(
+      color: Colors.green,
+    ),
+    Container(
+      color: Colors.orange,
+    ),
+    Container(
+      color: Colors.blue,
+    ),
   ];
   @override
   Widget build(BuildContext context) {
@@ -34,12 +43,17 @@ class _BottomNavigationState extends State<BottomNavigation> {
           selectedItemColor: ColorConstant.primaryblack,
           items: <BottomNavigationBarItem>[
             BottomNavigationBarItem(
-              icon: Icon(Icons.home_filled),
-              label: '',
+              activeIcon: Icon(Icons.home_filled),
+              icon: Icon(Icons.home_outlined),
+              label: "",
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.search),
-              label: '',
+              activeIcon: Icon(Icons.search_rounded),
+              icon: Icon(
+                Icons.search_outlined,
+                color: ColorConstant.primaryblack,
+              ),
+              label: "",
             ),
             BottomNavigationBarItem(
                 icon: InkWell(
@@ -56,12 +70,20 @@ class _BottomNavigationState extends State<BottomNavigation> {
                     child: Icon(Icons.add),
                   ),
                 ),
-                label: ''),
+                label: ""),
             BottomNavigationBarItem(
+              activeIcon: Icon(Icons.favorite),
               icon: Icon(Icons.favorite_outline),
-              label: '',
+              label: "",
             ),
             BottomNavigationBarItem(
+                activeIcon: CircleAvatar(
+                  backgroundColor: ColorConstant.primaryblack,
+                  radius: 16,
+                  child: Center(
+                    child: CircleAvatar(radius: 15, backgroundImage: AssetImage(ImageConstant.profilepic),),
+                  ),
+                ),
                 icon: CircleAvatar(
                   backgroundImage: AssetImage(ImageConstant.profilepic),
                   radius: 15,
